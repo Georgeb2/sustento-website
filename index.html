@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sustento — Maintenance Management Made Simple</title>
+  <meta name="description" content="Sustento is a modern CMMS for maintenance teams. Track assets, manage work orders, schedule preventive maintenance, and keep your team aligned." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────────── -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="7" fill="#2563eb"/>
+          <path d="M7 14h6m0 0v-5m0 5v5m0-5h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span>Sustento</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#industries">Industries</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://sustentocmms.com" target="_blank" class="btn btn-secondary">Sign in</a>
+        <a href="https://sustentocmms.com" target="_blank" class="btn btn-primary">Start free trial</a>
+      </nav>
+      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileNav">
+      <a href="#features">Features</a>
+      <a href="#industries">Industries</a>
+      <a href="#pricing">Pricing</a>
+      <a href="https://sustentocmms.com" target="_blank">Sign in</a>
+      <a href="https://sustentocmms.com" target="_blank" class="btn btn-primary">Start free trial</a>
+    </div>
+  </header>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge">Modern CMMS for maintenance teams</div>
+      <h1 class="hero-headline">Maintenance management<br/><span class="gradient-text">that gets out of your way</span></h1>
+      <p class="hero-sub">
+        Create your first work order in under 60 seconds. Track assets, schedule preventive maintenance, and keep your team aligned — without the complexity of legacy tools.
+      </p>
+      <div class="hero-cta">
+        <a href="https://sustentocmms.com" target="_blank" class="btn btn-primary btn-lg">Start free 14-day trial</a>
+        <span class="hero-note">No credit card required</span>
+      </div>
+      <div class="hero-image">
+        <div class="app-preview">
+          <div class="app-preview-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="app-preview-url">sustentocmms.com</span>
+          </div>
+          <div class="app-preview-body">
+            <div class="preview-sidebar">
+              <div class="preview-nav-item active">Dashboard</div>
+              <div class="preview-nav-item">Work Orders</div>
+              <div class="preview-nav-item">Assets</div>
+              <div class="preview-nav-item">Maintenance</div>
+            </div>
+            <div class="preview-content">
+              <div class="preview-stat-row">
+                <div class="preview-stat blue"><div class="preview-stat-num">12</div><div class="preview-stat-label">Open WOs</div></div>
+                <div class="preview-stat yellow"><div class="preview-stat-num">3</div><div class="preview-stat-label">Overdue</div></div>
+                <div class="preview-stat green"><div class="preview-stat-num">48</div><div class="preview-stat-label">Assets</div></div>
+                <div class="preview-stat purple"><div class="preview-stat-num">5</div><div class="preview-stat-label">PM Schedules</div></div>
+              </div>
+              <div class="preview-wo-list">
+                <div class="preview-wo-item">
+                  <span class="preview-wo-badge urgent">Urgent</span>
+                  <span class="preview-wo-title">HVAC compressor fault — Level 3</span>
+                  <span class="preview-wo-status in-progress">In Progress</span>
+                </div>
+                <div class="preview-wo-item">
+                  <span class="preview-wo-badge high">High</span>
+                  <span class="preview-wo-title">Emergency lighting test — Zone B</span>
+                  <span class="preview-wo-status assigned">Assigned</span>
+                </div>
+                <div class="preview-wo-item">
+                  <span class="preview-wo-badge medium">Medium</span>
+                  <span class="preview-wo-title">Monthly fire suppression check</span>
+                  <span class="preview-wo-status open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Social proof ──────────────────────────────────────────────────────── -->
+  <section class="social-proof">
+    <div class="container">
+      <p class="social-proof-label">Built for teams managing real maintenance operations</p>
+      <div class="industry-chips">
+        <span>🏢 Buildings &amp; Facilities</span>
+        <span>🚛 Fleet Management</span>
+        <span>🏨 Hospitality</span>
+        <span>🍽️ Food &amp; Beverage</span>
+        <span>⚓ Marine</span>
+        <span>🏛️ Municipal</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ──────────────────────────────────────────────────────────── -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything your maintenance team needs</h2>
+        <p>From reactive fixes to planned maintenance — one tool, no spreadsheets.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <h3>Work Orders</h3>
+          <p>Create, assign, and track work orders through their full lifecycle. Status transitions, comments, time logging, and photo attachments — all in one place.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 17h7m-3.5-3.5v7"/></svg>
+          </div>
+          <h3>Asset Management</h3>
+          <p>Build a full hierarchy of your assets — sites, buildings, equipment, components. Attach photos, documents, and QR codes. Import hundreds of assets from Excel in minutes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>Preventive Maintenance</h3>
+          <p>Set schedules by days, weeks, or months. Work orders are created automatically when they're due. Never miss a service interval again.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>Checklists</h3>
+          <p>Define step-by-step procedures and attach them to work orders. Enforce completion — a work order can't be closed until every step is signed off.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3>Team Management</h3>
+          <p>Roles for admins, supervisors, and technicians. Track certifications and skill expiry. Match the right person to the job automatically.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3>Guest Request Portal</h3>
+          <p>A public URL for your tenants or guests to submit maintenance requests. QR codes on assets let anyone report a fault instantly — no login needed.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon indigo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3>Reporting</h3>
+          <p>Six built-in reports — PM compliance, work order trends, asset reliability, team performance, and more. Export to Excel for deeper analysis.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon gray">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h3>Audit Log</h3>
+          <p>Every status change, edit, comment, and checklist completion is recorded. Full traceability for compliance-driven industries.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Industries ────────────────────────────────────────────────────────── -->
+  <section class="industries" id="industries">
+    <div class="container">
+      <div class="section-header">
+        <h2>Built for your industry</h2>
+        <p>Sustento adapts its terminology, features, and default configuration to match the way your team works.</p>
+      </div>
+      <div class="industries-grid">
+        <div class="industry-card">
+          <div class="industry-emoji">🏢</div>
+          <h3>Buildings &amp; Facilities</h3>
+          <p>Manage reactive and planned maintenance across sites, buildings, and equipment. Guest portals for tenant requests. SLA tracking for FM contracts.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-emoji">🚛</div>
+          <h3>Fleet Management</h3>
+          <p>Vehicle asset hierarchy, service intervals, driver fault reporting, and resource booking to prevent double-scheduling of shared vehicles.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-emoji">🍽️</div>
+          <h3>Food &amp; Beverage</h3>
+          <p>Compliance-first checklists with enforced sign-off. Audit log for regulatory inspections. Equipment servicing history at your fingertips.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-emoji">⚓</div>
+          <h3>Marine</h3>
+          <p>A modern alternative to legacy desktop tools. Survey-ready documentation, equipment registers, and planned maintenance schedules for vessels.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-emoji">🏨</div>
+          <h3>Hospitality</h3>
+          <p>Guest-facing request portals with QR codes in every room. Rapid response tracking. Keep operations invisible to guests.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-emoji">🏛️</div>
+          <h3>Municipal</h3>
+          <p>Manage public infrastructure across multiple sites and asset classes. Structured workflows, compliance reporting, and full audit trails.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing ───────────────────────────────────────────────────────────── -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2>Simple, transparent pricing</h2>
+        <p>Start free for 14 days. No credit card required.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price">$29<span>/month</span></div>
+          <div class="pricing-desc">For small maintenance teams getting started.</div>
+          <ul class="pricing-features">
+            <li>Up to 5 users</li>
+            <li>Up to 500 assets</li>
+            <li>Work orders &amp; PM schedules</li>
+            <li>Asset management</li>
+            <li>Email notifications</li>
+            <li>Excel import / export</li>
+          </ul>
+          <a href="https://sustentocmms.com" target="_blank" class="btn btn-outline btn-full">Start free trial</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most popular</div>
+          <div class="pricing-tier">Pro</div>
+          <div class="pricing-price">$79<span>/month</span></div>
+          <div class="pricing-desc">For growing teams with more assets and users.</div>
+          <ul class="pricing-features">
+            <li>Up to 20 users</li>
+            <li>Unlimited assets</li>
+            <li>Everything in Starter</li>
+            <li>Checklists &amp; audit log</li>
+            <li>Guest request portal</li>
+            <li>Reporting &amp; charts</li>
+            <li>SMS notifications</li>
+            <li>Photo &amp; document attachments</li>
+          </ul>
+          <a href="https://sustentocmms.com" target="_blank" class="btn btn-primary btn-full">Start free trial</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Business</div>
+          <div class="pricing-price">$199<span>/month</span></div>
+          <div class="pricing-desc">For larger organisations with advanced needs.</div>
+          <ul class="pricing-features">
+            <li>Unlimited users</li>
+            <li>Unlimited assets</li>
+            <li>Everything in Pro</li>
+            <li>API access</li>
+            <li>Custom branding</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="https://sustentocmms.com" target="_blank" class="btn btn-outline btn-full">Start free trial</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────────────────────────── -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Ready to get your maintenance under control?</h2>
+      <p>Join maintenance teams using Sustento to eliminate spreadsheets, reduce downtime, and stay on top of every asset.</p>
+      <a href="https://sustentocmms.com" target="_blank" class="btn btn-white btn-lg">Start your free 14-day trial</a>
+      <p class="cta-note">No credit card required · Set up in minutes</p>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+            <rect width="28" height="28" rx="7" fill="#2563eb"/>
+            <path d="M7 14h6m0 0v-5m0 5v5m0-5h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <span>Sustento</span>
+        </a>
+        <p>Modern maintenance management for the teams that keep things running.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="https://sustentocmms.com" target="_blank">Sign in</a>
+        </div>
+        <div>
+          <h4>Industries</h4>
+          <a href="#industries">Buildings</a>
+          <a href="#industries">Fleet</a>
+          <a href="#industries">Marine</a>
+          <a href="#industries">Municipal</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="mailto:hello@sustentosoftware.com">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Sustento Software. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('mobileNav').classList.toggle('open')
+    })
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-mobile a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('mobileNav').classList.remove('open')
+      })
+    })
+  </script>
+
+</body>
+</html>
