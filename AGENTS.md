@@ -20,7 +20,7 @@ Sustento is a **modern CMMS** (Computerized Maintenance Management System) — v
 - **Core jobs:** work orders, asset management, preventive maintenance, checklists, team management, guest request portals, reporting, audit log.
 - **The wedge:** "modern alternative to legacy/desktop tools" — fast, simple, no spreadsheets. The product "gets out of your way."
 - **Verticals we speak to** (keep terminology adaptable per industry): Buildings & Facilities, Fleet Management, Hospitality, Food & Beverage, Marine, Municipal.
-- **Primary CTA:** "Start free 14-day trial" → `https://www.sustentocmms.com`. Always pair with reassurance: "No credit card required."
+- **Primary CTA:** "Request early access" → `mailto:info@sustentosoftware.com`. The product is pre-launch / not yet open for self-serve trials, so do **not** add "start free trial" / "no credit card" signup CTAs. "Sign in" still points existing users to `https://www.sustentocmms.com`.
 - **Contact:** `info@sustentosoftware.com` (sales/pricing), `hello@sustentosoftware.com` (general). Legal entity: **Sustento Software**.
 
 When adding copy, anchor it to a concrete maintenance outcome (less downtime, never miss a service interval, full audit trail) rather than generic SaaS fluff.
