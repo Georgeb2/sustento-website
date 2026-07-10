@@ -33,7 +33,7 @@ When adding copy, anchor it to a concrete maintenance outcome (less downtime, ne
 - **Benefit-first, outcome-driven.** Lead with what the team gets ("Create your first work order in under 60 seconds"), not feature lists.
 - **Practical, not hypey.** Avoid superlatives and buzzwords ("revolutionary", "AI-powered", "world-class"). We earn trust by being specific.
 - **Respect the operator's time.** Copy mirrors the product promise: get out of the way.
-- **British/international spelling** is used in places ("finalising", "organisations"). Match the surrounding copy; don't Americanize existing text.
+- **US English spelling** throughout — e.g. "finalizing", "organizations", not UK variants ("finalising", "organisations").
 - Sentence case for most UI; Title Case is fine for short labels/badges. Use the em dash (—) as a connector, consistent with existing copy.
 
 ---
