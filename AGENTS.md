@@ -2,12 +2,36 @@
 
 Guidance for AI agents (and humans) editing this repo. The goal: keep every change **on-brand** with Sustento's voice, palette, and positioning.
 
-This is a **static marketing site** — two files do all the work:
+This is a **static marketing site** — no build step, framework, or package manager. Edit files directly; open them in a browser to preview.
 
-- `index.html` — page structure and copy
-- `styles.css` — the entire design system (CSS custom properties + components)
+### Site structure
 
-There is no build step, framework, or package manager. Edit the files directly; open `index.html` in a browser to preview.
+| Path | Purpose |
+|------|---------|
+| `index.html` | Primary marketing homepage |
+| `styles.css` | Shared design system (CSS custom properties + components) |
+| `industries/<slug>/index.html` | Vertical / industry sub-sites |
+
+**Live industry pages today:**
+- `/industries/buildings-facilities/`
+- `/industries/hospitality/`
+- `/industries/municipal/`
+
+**Still homepage-only** (no dedicated page yet): Fleet Management, Food & Beverage, Marine.
+
+Asset and stylesheet links on subpages must use **site-root paths** (`/styles.css`, `/logo.png`, `/#features`) so they resolve correctly when served from Netlify or similar.
+
+### Adding a new vertical
+
+1. Create `industries/<slug>/index.html` following an existing industry page (nav → breadcrumb/hero → industry features → resources → CTA → footer).
+2. Rewrite features and hero copy in that industry’s maintenance terminology.
+3. Scaffold three resource cards (Demo, Comparison, White paper) with `mailto:info@sustentosoftware.com` and a clear subject line until real assets exist.
+4. Link the vertical from homepage chips, industry cards, and footers (main + sibling industry pages).
+5. Document the new slug in this file.
+
+### Resource cards
+
+Use `.resources` / `.resource-card` / `.resource-type`. Prefer real demo URLs or PDF `href`s when available; until then use mailto CTAs (“Request a demo”, “Request the comparison”, “Request the white paper”). Do not invent competitor names or claim downloadable assets that do not exist.
 
 ---
 
@@ -103,16 +127,17 @@ Don't introduce new hues outside this set. If a new accent is truly needed, exte
 
 - **Buttons:** `.btn` + a variant (`.btn-primary`, `.btn-secondary`, `.btn-outline`, `.btn-white`), optional `.btn-lg` / `.btn-full`. Primary = brand blue. `.btn-white` is for the dark CTA band.
 - **Layout:** wrap content in `.container` (max-width 1120px, 24px gutters). Sections use `.section-header` for centered title + subtitle.
-- **Cards:** `.feature-card`, `.industry-card`, `.pricing-card` share the white / `--gray-200` border / `--radius` pattern. Feature icons are 44px rounded tiles with a colored accent class.
+- **Cards:** `.feature-card`, `.industry-card`, `.pricing-card`, `.resource-card` share the white / `--gray-200` border / `--radius` pattern. Feature icons are 44px rounded tiles with a colored accent class. Linked industry cards use `a.industry-card`.
+- **Industry pages:** `.page-hero` (left-aligned hero), `.breadcrumb`, `.resources` / `.resources-grid` / `.resource-type` for vertical resource sections.
 - **Icons:** inline SVGs, 24×24 viewBox, `stroke="currentColor"`, `stroke-width="2"` (Heroicons-style outline). Match this style for any new icon; color comes from the parent `.feature-icon.<accent>`.
 - **Responsive:** breakpoints at `768px` and `480px`. Test mobile — the nav collapses to a hamburger (`#mobileToggle` / `#mobileNav`) and the preview sidebar hides.
-- **JS:** one small inline script for the mobile nav. Keep it dependency-free and minimal; no frameworks.
+- **JS:** one small inline script for the mobile nav (repeated per page). Keep it dependency-free and minimal; no frameworks.
 
 ---
 
 ## When editing, do
 
-- Reuse CSS variables and existing component classes; keep styling in `styles.css` and avoid inline `style=` attributes in `index.html`.
+- Reuse CSS variables and existing component classes; keep styling in `styles.css` and avoid inline `style=` attributes in HTML.
 - Keep copy specific, benefit-led, and aligned to the maintenance/CMMS domain and the six verticals.
 - Preserve the calm, professional, blue-forward look. Purple is an accent, never the lead.
 - Keep accessibility intact: real `alt` text, sufficient contrast, semantic headings, `aria-label`s on icon-only controls.
@@ -122,5 +147,5 @@ Don't introduce new hues outside this set. If a new accent is truly needed, exte
 
 - Don't add frameworks, build steps, trackers, or heavy dependencies to this static site.
 - Don't introduce off-palette colors, a new typeface, or hypey/buzzword copy.
-- Don't change CTAs/links/contact emails without reason — primary CTA points to `www.sustentocmms.com`.
+- Don't change CTAs/links/contact emails without reason — primary CTA is early access via `mailto:info@sustentosoftware.com`; Sign in still points to `www.sustentocmms.com`.
 - Don't hardcode hex values that already have a token.

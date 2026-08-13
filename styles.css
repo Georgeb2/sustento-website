@@ -415,6 +415,16 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 28px;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+a.industry-card {
+  display: block;
+  color: inherit;
+}
+a.industry-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+  border-color: #bfdbfe;
 }
 .industry-emoji { font-size: 32px; margin-bottom: 12px; }
 .industry-card h3 {
@@ -427,6 +437,107 @@ img { max-width: 100%; display: block; }
   font-size: 14px;
   color: var(--gray-600);
   line-height: 1.65;
+}
+.industry-chips a {
+  padding: 7px 16px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  transition: color .15s, background .15s, border-color .15s;
+}
+.industry-chips a:hover {
+  color: var(--blue);
+  background: var(--blue-lt);
+  border-color: #bfdbfe;
+}
+
+/* ── Industry vertical pages ──────────────────────────────────────────────── */
+.page-hero {
+  background: linear-gradient(180deg, #f0f7ff 0%, #fff 100%);
+  padding: 64px 0 80px;
+}
+.page-hero .hero-inner {
+  align-items: flex-start;
+  text-align: left;
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-400);
+  margin-bottom: 24px;
+}
+.breadcrumb a {
+  color: var(--gray-600);
+  transition: color .15s;
+}
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb-sep { color: var(--gray-200); }
+.page-hero .hero-headline {
+  max-width: 720px;
+}
+.page-hero .hero-sub {
+  max-width: 580px;
+  margin-bottom: 32px;
+}
+.page-hero .hero-cta {
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+/* ── Resources ────────────────────────────────────────────────────────────── */
+.resources {
+  padding: 96px 0;
+  background: var(--gray-50);
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+.resource-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.resource-type {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: var(--blue-lt);
+  color: var(--blue);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+.resource-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+.resource-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.resource-card .btn {
+  align-self: flex-start;
 }
 
 /* ── Pricing ──────────────────────────────────────────────────────────────── */
@@ -621,7 +732,9 @@ img { max-width: 100%; display: block; }
 
   .features { padding: 64px 0; }
   .industries { padding: 64px 0; }
+  .resources { padding: 64px 0; }
   .pricing { padding: 64px 0; }
+  .page-hero { padding: 48px 0 64px; }
 
   .footer-inner {
     grid-template-columns: 1fr 1fr;
