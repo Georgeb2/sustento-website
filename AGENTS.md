@@ -128,7 +128,7 @@ Don't introduce new hues outside this set. If a new accent is truly needed, exte
 - **Buttons:** `.btn` + a variant (`.btn-primary`, `.btn-secondary`, `.btn-outline`, `.btn-white`), optional `.btn-lg` / `.btn-full`. Primary = brand blue. `.btn-white` is for the dark CTA band.
 - **Layout:** wrap content in `.container` (max-width 1120px, 24px gutters). Sections use `.section-header` for centered title + subtitle.
 - **Cards:** `.feature-card`, `.industry-card`, `.pricing-card`, `.resource-card` share the white / `--gray-200` border / `--radius` pattern. Feature icons are 44px rounded tiles with a colored accent class. Linked industry cards use `a.industry-card`.
-- **Industry pages:** `.page-hero` (left-aligned hero), `.breadcrumb`, `.resources` / `.resources-grid` / `.resource-type` for vertical resource sections.
+- **Industry pages:** `.page-hero` (left-aligned hero), `.page-hero-photo`, `.breadcrumb`, `.asset-gallery` / `.asset-card` for vertical photos, `.resources` / `.resources-grid` / `.resource-type` for vertical resource sections.
 - **Icons:** inline SVGs, 24×24 viewBox, `stroke="currentColor"`, `stroke-width="2"` (Heroicons-style outline). Match this style for any new icon; color comes from the parent `.feature-icon.<accent>`.
 - **Responsive:** breakpoints at `768px` and `480px`. Test mobile — the nav collapses to a hamburger (`#mobileToggle` / `#mobileNav`) and the preview sidebar hides.
 - **JS:** one small inline script for the mobile nav (repeated per page). Keep it dependency-free and minimal; no frameworks.
