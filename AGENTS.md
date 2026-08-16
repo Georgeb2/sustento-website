@@ -17,7 +17,7 @@ This is a **static marketing site** — no build step, framework, or package man
 - `/industries/hospitality/`
 - `/industries/municipal/`
 
-**Still homepage-only** (no dedicated page yet): Fleet Management, Food & Beverage, Marine.
+**Still homepage-only** (no dedicated page yet): Fleet Management, Property Management, Food & Beverage, Marine.
 
 Asset and stylesheet links on subpages must use **site-root paths** (`/styles.css`, `/logo.png`, `/#features`) so they resolve correctly when served from Netlify or similar.
 
@@ -41,9 +41,9 @@ Sustento is a **modern CMMS** (Computerized Maintenance Management System) — v
 
 - **Category:** CMMS / maintenance management software.
 - **Buyer:** maintenance supervisors, facility managers, operations leads.
-- **Core jobs:** work orders, asset management, preventive maintenance, checklists, team management, guest request portals, reporting, audit log.
+- **Core jobs:** work orders (labels vary by vertical), asset management, preventive maintenance, library templates, checklists, team management, guest request portals, reporting, audit log.
 - **The wedge:** "modern alternative to legacy/desktop tools" — fast, simple, no spreadsheets. The product "gets out of your way."
-- **Verticals we speak to** (keep terminology adaptable per industry): Buildings & Facilities, Fleet Management, Hospitality, Food & Beverage, Marine, Municipal.
+- **Verticals we speak to** (match `VERTICAL_CONFIG` in the Sustento app): Buildings & Facilities, Fleet Management, Property Management, Hospitality, Food & Beverage, Marine, Municipal / Government. Use each vertical’s terminology (e.g. hospitality: service request / engineer / location; fleet: job card / mechanic / vehicle).
 - **Primary CTA:** "Request early access" → `mailto:info@sustentosoftware.com`. The product is pre-launch / not yet open for self-serve trials, so do **not** add "start free trial" / "no credit card" signup CTAs. "Sign in" still points existing users to `https://www.sustentocmms.com`.
 - **Contact:** `info@sustentosoftware.com` (sales/pricing), `hello@sustentosoftware.com` (general). Legal entity: **Sustento Software**.
 
@@ -64,17 +64,17 @@ When adding copy, anchor it to a concrete maintenance outcome (less downtime, ne
 
 ## Brand palette
 
-The palette lives in `:root` in `styles.css`. **Reuse the existing custom properties** instead of hardcoding hex values. When a needed shade isn't tokenized (many accent shades are currently inline), match the values below exactly.
+The palette lives in `:root` in `styles.css` and **must stay in sync** with the Sustento app Tailwind `brand` scale in `frontend/tailwind.config.js`. CSS still uses `--blue*` names; the hex values are the app’s indigo brand.
 
-### Core brand (primary)
+| Token          | Hex       | App equivalent | Use |
+|----------------|-----------|----------------|-----|
+| `--blue`       | `#4f46e5` | `brand-600`    | Primary buttons, links, badges, accents |
+| `--blue-dk`    | `#4338ca` | `brand-700`    | Primary hover / pressed |
+| `--blue-lt`    | `#eef2ff` | `brand-50`     | Tinted backgrounds, badge fills |
+| `--brand-200`  | `#c7d2fe` | `brand-200`    | Rings, badge borders, card hover |
+| `--brand-900`  | `#312e81` | `brand-900`    | App-preview sidebar (product chrome) |
 
-| Token        | Hex       | Use |
-|--------------|-----------|-----|
-| `--blue`     | `#2563eb` | Primary brand color: primary buttons, links, badges, accents |
-| `--blue-dk`  | `#1d4ed8` | Primary hover / pressed state |
-| `--blue-lt`  | `#eff6ff` | Tinted backgrounds, badge fills, outline-button hover |
-
-**Brand gradient** (hero highlight + CTA section): `linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)` for text; the CTA band uses `linear-gradient(135deg, #1e40af 0%, #4f46e5 100%)`. Purple (`#7c3aed` / indigo `#4f46e5`) is the **secondary accent** — use it sparingly, mainly in gradients.
+**Brand gradient** (hero highlight): `linear-gradient(135deg, var(--blue) 0%, var(--brand-900) 100%)`. CTA band: `linear-gradient(135deg, #3730a3 0%, var(--blue) 100%)` (`brand-800` → `brand-600`). Do not reintroduce sky-blue `#2563eb` as the primary.
 
 ### Neutrals (grays)
 
@@ -95,13 +95,13 @@ All gray steps above are defined in `:root` — use the token, don't hardcode th
 
 These are semantic, low-saturation pairings (tint background + saturated foreground). Keep them consistent for meaning:
 
-- **Blue** (info / default): bg `#eff6ff` / `#dbeafe`, fg `#2563eb` / `#1d4ed8`
+- **Blue / brand** (info / default): bg `var(--blue-lt)` / `#e0e7ff` (`brand-100`), fg `var(--blue)` / `var(--blue-dk)`
 - **Green** (success / assets / "open" PM): bg `#f0fdf4`, fg `#16a34a`; check icons use `#16a34a`
 - **Purple** (PM / assigned): bg `#faf5ff` / `#ede9fe`, fg `#7c3aed` / `#6d28d9`
 - **Amber/Yellow** (overdue / warning): bg `#fffbeb` / `#fef9c3`, fg `#d97706` / `#854d0e`
 - **Red** (urgent / errors): bg `#fef2f2` / `#fee2e2`, fg `#dc2626`
 - **Orange** (high priority): bg `#ffedd5`, fg `#c2410c`
-- **Teal** (`#0d9488`), **Indigo** (`#4f46e5`), **Gray** (neutral) — additional feature-icon accents
+- **Teal** (`#0d9488`), **Gray** (neutral) — additional feature-icon accents. `.feature-icon.indigo` uses the brand indigo tokens.
 
 Don't introduce new hues outside this set. If a new accent is truly needed, extend the system deliberately and document it here.
 
@@ -110,7 +110,7 @@ Don't introduce new hues outside this set. If a new accent is truly needed, exte
 - Page background: `#fff`; alternating sections use `--gray-50`.
 - Radius: `--radius: 12px` (cards), buttons use `8px` (`10px` for `.btn-lg`), pills use `100px`.
 - Shadows: `--shadow-sm`, `--shadow`, `--shadow-lg` — use these tokens, don't roll new box-shadows.
-- The dark app-preview sidebar uses `#1e3a6e` (deep navy) — part of the product UI illustration.
+- The dark app-preview sidebar uses `--brand-900` (`#312e81`) — same as the product sidebar.
 
 ---
 
@@ -138,8 +138,8 @@ Don't introduce new hues outside this set. If a new accent is truly needed, exte
 ## When editing, do
 
 - Reuse CSS variables and existing component classes; keep styling in `styles.css` and avoid inline `style=` attributes in HTML.
-- Keep copy specific, benefit-led, and aligned to the maintenance/CMMS domain and the six verticals.
-- Preserve the calm, professional, blue-forward look. Purple is an accent, never the lead.
+- Keep copy specific, benefit-led, and aligned to the maintenance/CMMS domain and the product verticals.
+- Preserve the calm, professional, indigo-forward look that matches the Sustento app. Do not lead with sky blue.
 - Keep accessibility intact: real `alt` text, sufficient contrast, semantic headings, `aria-label`s on icon-only controls.
 - Match existing spelling/voice in the file you're editing.
 

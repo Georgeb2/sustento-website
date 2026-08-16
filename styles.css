@@ -2,9 +2,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --blue:    #2563eb;
-  --blue-dk: #1d4ed8;
-  --blue-lt: #eff6ff;
+  --blue:    #4f46e5;
+  --blue-dk: #4338ca;
+  --blue-lt: #eef2ff;
+  --brand-200: #c7d2fe;
+  --brand-900: #312e81;
   --gray-50:  #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
@@ -143,7 +145,7 @@ img { max-width: 100%; display: block; }
 
 /* ── Hero ─────────────────────────────────────────────────────────────────── */
 .hero {
-  background: linear-gradient(180deg, #f0f7ff 0%, #fff 100%);
+  background: linear-gradient(180deg, var(--blue-lt) 0%, #fff 100%);
   padding: 80px 0 0;
   overflow: hidden;
 }
@@ -163,7 +165,7 @@ img { max-width: 100%; display: block; }
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 24px;
-  border: 1px solid #bfdbfe;
+  border: 1px solid var(--brand-200);
 }
 .hero-headline {
   font-size: clamp(36px, 5vw, 60px);
@@ -174,7 +176,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 20px;
 }
 .gradient-text {
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--brand-900) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -235,7 +237,7 @@ img { max-width: 100%; display: block; }
 }
 .preview-sidebar {
   width: 160px;
-  background: #1e3a6e;
+  background: var(--brand-900);
   padding: 16px 0;
   flex-shrink: 0;
 }
@@ -262,7 +264,7 @@ img { max-width: 100%; display: block; }
   padding: 12px;
   border: 1px solid var(--gray-200);
 }
-.preview-stat.blue  { background: #eff6ff; border-color: #bfdbfe; }
+.preview-stat.blue  { background: var(--blue-lt); border-color: var(--brand-200); }
 .preview-stat.yellow{ background: #fffbeb; border-color: #fde68a; }
 .preview-stat.green { background: #f0fdf4; border-color: #bbf7d0; }
 .preview-stat.purple{ background: #faf5ff; border-color: #e9d5ff; }
@@ -297,7 +299,7 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   white-space: nowrap;
 }
-.preview-wo-status.in-progress { background: #dbeafe; color: #1d4ed8; }
+.preview-wo-status.in-progress { background: #e0e7ff; color: var(--blue-dk); }
 .preview-wo-status.assigned    { background: #ede9fe; color: #6d28d9; }
 .preview-wo-status.open        { background: var(--gray-100); color: var(--gray-600); }
 
@@ -386,7 +388,7 @@ img { max-width: 100%; display: block; }
 .feature-icon.amber  { background: #fffbeb; color: #d97706; }
 .feature-icon.red    { background: #fef2f2; color: #dc2626; }
 .feature-icon.teal   { background: #f0fdfa; color: #0d9488; }
-.feature-icon.indigo { background: #eef2ff; color: #4f46e5; }
+.feature-icon.indigo { background: var(--blue-lt); color: var(--blue); }
 .feature-icon.gray   { background: var(--gray-100); color: var(--gray-600); }
 .feature-card h3 {
   font-size: 16px;
@@ -424,7 +426,7 @@ a.industry-card {
 a.industry-card:hover {
   box-shadow: var(--shadow);
   transform: translateY(-2px);
-  border-color: #bfdbfe;
+  border-color: var(--brand-200);
 }
 .industry-emoji { font-size: 32px; margin-bottom: 12px; }
 .industry-card h3 {
@@ -451,12 +453,12 @@ a.industry-card:hover {
 .industry-chips a:hover {
   color: var(--blue);
   background: var(--blue-lt);
-  border-color: #bfdbfe;
+  border-color: var(--brand-200);
 }
 
 /* ── Industry vertical pages ──────────────────────────────────────────────── */
 .page-hero {
-  background: linear-gradient(180deg, #f0f7ff 0%, #fff 100%);
+  background: linear-gradient(180deg, var(--blue-lt) 0%, #fff 100%);
   padding: 64px 0 80px;
 }
 .page-hero .hero-inner {
@@ -604,7 +606,7 @@ a.industry-card:hover {
 }
 .pricing-card.featured {
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px #bfdbfe;
+  box-shadow: 0 0 0 3px var(--brand-200);
 }
 .pricing-badge {
   position: absolute;
@@ -694,7 +696,7 @@ a.industry-card:hover {
 
 /* ── CTA ──────────────────────────────────────────────────────────────────── */
 .cta {
-  background: linear-gradient(135deg, #1e40af 0%, #4f46e5 100%);
+  background: linear-gradient(135deg, #3730a3 0%, var(--blue) 100%);
   padding: 80px 0;
   text-align: center;
 }
