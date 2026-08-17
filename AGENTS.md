@@ -47,7 +47,8 @@ Sustento is a **modern CMMS** (Computerized Maintenance Management System) — v
 - **Primary CTA:** "Request early access" → `mailto:info@sustentosoftware.com`. The product is pre-launch / not yet open for self-serve trials, so do **not** add "start free trial" / "no credit card" signup CTAs. "Sign in" still points existing users to `https://www.sustentocmms.com`.
 - **Contact:** `info@sustentosoftware.com` (sales/pricing), `hello@sustentosoftware.com` (general). Legal entity: **Sustento Software**.
 
-When adding copy, anchor it to a concrete maintenance outcome (less downtime, never miss a service interval, full audit trail) rather than generic SaaS fluff.
+- **Security:** Authenticator MFA is RFC 6238 TOTP (Google Authenticator, Authy, 1Password). Describe GDPR **practices** (processor/controller, DPA, 30-day post-cancellation purge, user anonymize/delete, TLS, optional EU hosting) — do **not** claim “GDPR certified” or “fully compliant.”
+- **Vertical highlights:** Municipal — geolocation/asset map and public request portal. Buildings — tenant portal, SLA, asset map. Hospitality — guest portal, QR, property map, service-request language.
 
 ---
 

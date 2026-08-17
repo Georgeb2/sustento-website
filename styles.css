@@ -356,6 +356,10 @@ img { max-width: 100%; display: block; }
 .features {
   padding: 96px 0;
 }
+.trust {
+  padding: 96px 0;
+  background: var(--gray-50);
+}
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -778,6 +782,7 @@ a.industry-card:hover {
   .preview-stat-row { grid-template-columns: repeat(2, 1fr); }
 
   .features { padding: 64px 0; }
+  .trust { padding: 64px 0; }
   .industries { padding: 64px 0; }
   .resources { padding: 64px 0; }
   .pricing { padding: 64px 0; }
