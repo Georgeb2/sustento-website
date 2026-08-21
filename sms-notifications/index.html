@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS Notifications — Opt-In &amp; Consent | Sustento</title>
+  <meta name="description" content="How Sustento Software obtains express written consent for transactional SMS work-order and maintenance alerts. Opt-in is voluntary and off by default. Reply STOP to opt out." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.sustentosoftware.com/sms-notifications/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.png" alt="Sustento" class="nav-logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/#industries">Industries</a>
+        <a href="/#trust">Security</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="https://www.sustentocmms.com" target="_blank" rel="noopener" class="btn btn-secondary">Sign in</a>
+        <a href="mailto:info@sustentosoftware.com" class="btn btn-primary">Request early access</a>
+      </nav>
+      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileNav">
+      <a href="/#features">Features</a>
+      <a href="/#industries">Industries</a>
+      <a href="/#trust">Security</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="https://www.sustentocmms.com" target="_blank" rel="noopener">Sign in</a>
+      <a href="mailto:info@sustentosoftware.com" class="btn btn-primary">Request early access</a>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container legal-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span>SMS Notifications</span>
+      </nav>
+
+      <h1>SMS Notifications — Opt-In &amp; Consent</h1>
+      <p class="legal-meta">Program: <strong>Sustento SMS Alerts</strong> · Operated by <strong>Sustento Software</strong> · Last updated: August 2026</p>
+
+      <div class="legal-callout" role="note">
+        <p>
+          <strong>Express consent (summary).</strong> Sustento Software sends transactional text messages about work orders and maintenance activity only to authenticated users who (1) voluntarily provide their mobile phone number and (2) turn on SMS for specific notification events. SMS preferences are <strong>off by default</strong>. Providing a phone number alone does not enroll you in SMS. Message frequency varies with work activity. <strong>Message and data rates may apply.</strong> Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help. Consent is not a condition of purchasing or using Sustento.
+        </p>
+      </div>
+
+      <h2>What messages we send</h2>
+      <p>
+        <strong>Transactional only.</strong> Sustento SMS Alerts notify signed-in maintenance team members about work related to their Sustento account. Examples include work order assigned, status changed, comment added, overdue work, and preventive maintenance reminders. We do <strong>not</strong> send marketing, advertising, or promotional text messages.
+      </p>
+      <p>Sample messages:</p>
+      <ul>
+        <li><code>Sustento: WO WO-0001 assigned to you - Replace air filter. Due: 20 Aug 2026. Reply STOP to opt out.</code></li>
+        <li><code>Sustento: WO WO-0042 is OVERDUE - HVAC inspection. Please update status. Reply STOP to opt out.</code></li>
+      </ul>
+
+      <h2>How express opt-in works</h2>
+      <p>
+        Consent is collected inside the Sustento web application at
+        <a href="https://www.sustentocmms.com" target="_blank" rel="noopener">www.sustentocmms.com</a>
+        after the user signs in with credentials issued by their employer (the Sustento customer). Opt-in is voluntary, informed, and requires intentional action.
+      </p>
+      <ol>
+        <li>
+          Open <strong>My Profile → Profile</strong> and enter a mobile number in the <strong>Phone (SMS)</strong> field, then save.
+          Numbers must use an allowed country code (United States and Canada: +1).
+        </li>
+        <li>
+          Open <strong>My Profile → Notifications</strong>.
+        </li>
+        <li>
+          Turn on the <strong>SMS</strong> toggle for each event type you want to receive
+          (for example, <em>Work order assigned to me</em>). Email toggles are separate; enabling email does <strong>not</strong> enable SMS.
+          SMS toggles are unchecked / off until you turn them on.
+        </li>
+      </ol>
+      <p>
+        By saving your mobile number and enabling one or more SMS toggles, you expressly consent to receive recurring transactional SMS messages from Sustento Software for those events, until you opt out.
+      </p>
+
+      <h2>Opt-in workflow (visual)</h2>
+      <div class="optin-mock" aria-label="Illustration of Sustento SMS opt-in screens">
+        <div class="optin-card">
+          <h3>1. Profile — phone number</h3>
+          <label class="optin-label">Phone (SMS)</label>
+          <div class="optin-input">+1 555 000 0000</div>
+          <p class="optin-hint">Optional. Used only for SMS alerts you enable. Message and data rates may apply.</p>
+          <div class="optin-btn">Save Changes</div>
+        </div>
+        <div class="optin-card">
+          <h3>2. Notifications — SMS off by default</h3>
+          <div class="optin-row">
+            <span>Work order assigned to me</span>
+            <span class="optin-toggles"><span class="pill">Email</span> <span class="pill off">SMS off</span></span>
+          </div>
+          <div class="optin-row">
+            <span>Work order overdue</span>
+            <span class="optin-toggles"><span class="pill">Email</span> <span class="pill on">SMS on</span></span>
+          </div>
+          <p class="optin-hint">User must flip each SMS control on. No pre-checked boxes.</p>
+        </div>
+      </div>
+
+      <h2>Message frequency</h2>
+      <p>
+        Frequency depends on work order and maintenance activity. Active field staff typically receive a few messages per week; supervisors who enable assignment alerts may receive fewer. There is no fixed daily quota — volume follows the events the user enabled.
+      </p>
+
+      <h2>How to opt out</h2>
+      <ul>
+        <li>Reply <strong>STOP</strong> to any Sustento SMS message to cancel further texts.</li>
+        <li>Reply <strong>HELP</strong> for help information.</li>
+        <li>Turn off SMS toggles under <strong>My Profile → Notifications</strong>, or remove your mobile number on the Profile tab.</li>
+        <li>Ask your organization administrator to deactivate your account.</li>
+      </ul>
+
+      <h2>Pricing disclosure</h2>
+      <p><strong>Message and data rates may apply</strong> depending on your mobile carrier and plan. Sustento does not charge a separate fee for SMS alerts beyond your Sustento subscription.</p>
+
+      <h2>Customer care</h2>
+      <p>
+        SMS program questions: <a href="mailto:privacy@sustento.io">privacy@sustento.io</a><br />
+        General contact: <a href="mailto:hello@sustentosoftware.com">hello@sustentosoftware.com</a><br />
+        Product sign-in: <a href="https://www.sustentocmms.com" target="_blank" rel="noopener">www.sustentocmms.com</a>
+      </p>
+
+      <h2>Privacy</h2>
+      <p>
+        Mobile numbers are stored on the user profile and used only to deliver alerts the user enabled.
+        SMS delivery is provided by Twilio. See the product
+        <a href="https://www.sustentocmms.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+        for how personal data is handled.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="/logo.png" alt="Sustento" class="nav-logo" />
+        </a>
+        <p>Modern maintenance management for the teams that keep things running.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <a href="/#features">Features</a>
+          <a href="/#pricing">Plans</a>
+          <a href="https://www.sustentocmms.com" target="_blank" rel="noopener">Sign in</a>
+        </div>
+        <div>
+          <h4>Industries</h4>
+          <a href="/industries/buildings-facilities/">Buildings</a>
+          <a href="/industries/hospitality/">Hospitality</a>
+          <a href="/industries/municipal/">Municipal</a>
+          <a href="/#industries">All industries</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="mailto:hello@sustentosoftware.com">Contact</a>
+          <a href="/#trust">Security &amp; privacy</a>
+          <a href="/sms-notifications/">SMS Notifications</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Sustento Software. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('mobileNav').classList.toggle('open')
+    })
+    document.querySelectorAll('.nav-mobile a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('mobileNav').classList.remove('open')
+      })
+    })
+  </script>
+</body>
+</html>
