@@ -2,7 +2,20 @@
 
 Guidance for AI agents (and humans) editing this repo. The goal: keep every change **on-brand** with Sustento's voice, palette, and positioning.
 
-This is a **static marketing site** — no build step, framework, or package manager. Edit files directly; open them in a browser to preview.
+This is a **static marketing site** — no build step, framework, or package manager. Edit files directly; open them in a browser to preview. Hosted on **Cloudflare Pages**.
+
+### Visitor access (WIP)
+
+While the site is a work in progress it should stay **private**. Prefer **Cloudflare Access** (Zero Trust) over putting a password in the repo:
+
+1. [Cloudflare Zero Trust](https://one.dash.cloudflare.com/) → **Access** → **Applications** → **Add an application** → **Self-hosted**.
+2. Application domain: the marketing site hostname (e.g. `www.example.com` or `*.pages.dev`).
+3. Policy: **Allow** → include **Emails** → your email only (or a one-time PIN / Google login).
+4. Save. Unauthenticated visitors get Cloudflare’s login gate; you alone get through.
+
+To open the site publicly later: remove or disable that Access application (or change the policy to Allow everyone).
+
+Do **not** commit site passwords into this repo.
 
 ### Site structure
 
@@ -11,6 +24,7 @@ This is a **static marketing site** — no build step, framework, or package man
 | `index.html` | Primary marketing homepage |
 | `styles.css` | Shared design system (CSS custom properties + components) |
 | `industries/<slug>/index.html` | Vertical / industry sub-sites |
+| `sms-notifications/index.html` | Public SMS opt-in / consent page (Twilio toll-free verification) |
 
 **Live industry pages today:**
 - `/industries/buildings-facilities/`
@@ -130,6 +144,7 @@ Don't introduce new hues outside this set. If a new accent is truly needed, exte
 - **Layout:** wrap content in `.container` (max-width 1120px, 24px gutters). Sections use `.section-header` for centered title + subtitle.
 - **Cards:** `.feature-card`, `.industry-card`, `.pricing-card`, `.resource-card` share the white / `--gray-200` border / `--radius` pattern. Feature icons are 44px rounded tiles with a colored accent class. Linked industry cards use `a.industry-card`.
 - **Industry pages:** `.page-hero` (left-aligned hero), `.page-hero-photo`, `.breadcrumb`, `.asset-gallery` / `.asset-card` for vertical photos, `.resources` / `.resources-grid` / `.resource-type` for vertical resource sections.
+- **Legal / SMS consent:** `.legal-page`, `.legal-callout`, `.optin-mock` for `/sms-notifications/`. Keep STOP/HELP, “message and data rates may apply,” and off-by-default consent language accurate for carrier verification. Link **SMS Notifications** from every page footer under Company.
 - **Icons:** inline SVGs, 24×24 viewBox, `stroke="currentColor"`, `stroke-width="2"` (Heroicons-style outline). Match this style for any new icon; color comes from the parent `.feature-icon.<accent>`.
 - **Responsive:** breakpoints at `768px` and `480px`. Test mobile — the nav collapses to a hamburger (`#mobileToggle` / `#mobileNav`) and the preview sidebar hides.
 - **JS:** one small inline script for the mobile nav (repeated per page). Keep it dependency-free and minimal; no frameworks.
